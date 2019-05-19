@@ -17,7 +17,8 @@ class HomaPageCVC: UICollectionViewCell {
         // Initialization code
     }
 
-    func configureUI(){
-        
+    func configureUI(obj:DataSource){
+        mImageView.image = UIImage(named: obj.cellType.imageName)
+        mTitleLb.text = obj.desc
     }
 }
