@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		1208DA2E22915A82002635A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208DA2D22915A82002635A0 /* AppDelegate.swift */; };
-		1208DA3022915A82002635A0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208DA2F22915A82002635A0 /* ViewController.swift */; };
+		1208DA3022915A82002635A0 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208DA2F22915A82002635A0 /* HomePageVC.swift */; };
 		1208DA3322915A82002635A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1208DA3122915A82002635A0 /* Main.storyboard */; };
 		1208DA3522915A84002635A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1208DA3422915A84002635A0 /* Assets.xcassets */; };
 		1208DA3822915A84002635A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1208DA3622915A84002635A0 /* LaunchScreen.storyboard */; };
+		1208DA4422915D13002635A0 /* HomaPageCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208DA4222915D13002635A0 /* HomaPageCVC.swift */; };
+		1208DA4522915D13002635A0 /* HomaPageCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1208DA4322915D13002635A0 /* HomaPageCVC.xib */; };
+		1208DA4722915F92002635A0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208DA4622915F92002635A0 /* Constants.swift */; };
+		1208DA492291602E002635A0 /* UIVIEW+CORNER.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208DA482291602E002635A0 /* UIVIEW+CORNER.swift */; };
+		1208DA4C229162E4002635A0 /* FunModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208DA4B229162E4002635A0 /* FunModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1208DA2A22915A82002635A0 /* FunFact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunFact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1208DA2D22915A82002635A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1208DA2F22915A82002635A0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1208DA2F22915A82002635A0 /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
 		1208DA3222915A82002635A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1208DA3422915A84002635A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1208DA3722915A84002635A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1208DA3922915A84002635A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1208DA4222915D13002635A0 /* HomaPageCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomaPageCVC.swift; sourceTree = "<group>"; };
+		1208DA4322915D13002635A0 /* HomaPageCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomaPageCVC.xib; sourceTree = "<group>"; };
+		1208DA4622915F92002635A0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1208DA482291602E002635A0 /* UIVIEW+CORNER.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVIEW+CORNER.swift"; sourceTree = "<group>"; };
+		1208DA4B229162E4002635A0 /* FunModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,51 @@
 		1208DA2C22915A82002635A0 /* FunFact */ = {
 			isa = PBXGroup;
 			children = (
+				1208DA4A229162D2002635A0 /* Model */,
+				1208DA4122915B54002635A0 /* Views */,
+				1208DA4022915B47002635A0 /* Engine */,
+				1208DA3F22915B2F002635A0 /* Controllers */,
 				1208DA2D22915A82002635A0 /* AppDelegate.swift */,
-				1208DA2F22915A82002635A0 /* ViewController.swift */,
 				1208DA3122915A82002635A0 /* Main.storyboard */,
 				1208DA3422915A84002635A0 /* Assets.xcassets */,
 				1208DA3622915A84002635A0 /* LaunchScreen.storyboard */,
 				1208DA3922915A84002635A0 /* Info.plist */,
 			);
 			path = FunFact;
+			sourceTree = "<group>";
+		};
+		1208DA3F22915B2F002635A0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1208DA2F22915A82002635A0 /* HomePageVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1208DA4022915B47002635A0 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				1208DA482291602E002635A0 /* UIVIEW+CORNER.swift */,
+				1208DA4622915F92002635A0 /* Constants.swift */,
+			);
+			path = Engine;
+			sourceTree = "<group>";
+		};
+		1208DA4122915B54002635A0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1208DA4222915D13002635A0 /* HomaPageCVC.swift */,
+				1208DA4322915D13002635A0 /* HomaPageCVC.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1208DA4A229162D2002635A0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1208DA4B229162E4002635A0 /* FunModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +171,7 @@
 			files = (
 				1208DA3822915A84002635A0 /* LaunchScreen.storyboard in Resources */,
 				1208DA3522915A84002635A0 /* Assets.xcassets in Resources */,
+				1208DA4522915D13002635A0 /* HomaPageCVC.xib in Resources */,
 				1208DA3322915A82002635A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1208DA3022915A82002635A0 /* ViewController.swift in Sources */,
+				1208DA3022915A82002635A0 /* HomePageVC.swift in Sources */,
+				1208DA4422915D13002635A0 /* HomaPageCVC.swift in Sources */,
 				1208DA2E22915A82002635A0 /* AppDelegate.swift in Sources */,
+				1208DA4722915F92002635A0 /* Constants.swift in Sources */,
+				1208DA492291602E002635A0 /* UIVIEW+CORNER.swift in Sources */,
+				1208DA4C229162E4002635A0 /* FunModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
