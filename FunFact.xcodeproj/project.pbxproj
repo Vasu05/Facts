@@ -18,6 +18,11 @@
 		1208DA492291602E002635A0 /* UIVIEW+CORNER.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208DA482291602E002635A0 /* UIVIEW+CORNER.swift */; };
 		1208DA4C229162E4002635A0 /* FunModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208DA4B229162E4002635A0 /* FunModel.swift */; };
 		1208DA4E2291C6B2002635A0 /* FactsEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208DA4D2291C6B2002635A0 /* FactsEngine.swift */; };
+		1208DA7B229DAA47002635A0 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1208DA79229DAA47002635A0 /* CoreDataModel.xcdatamodeld */; };
+		1208DA7D229DAE00002635A0 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208DA7C229DAE00002635A0 /* CoreDataController.swift */; };
+		1208DA7F229DAEBD002635A0 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208DA7E229DAEBD002635A0 /* HistoryVC.swift */; };
+		1208DA8C229EFE7F002635A0 /* HistoryTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208DA8A229EFE7F002635A0 /* HistoryTblCell.swift */; };
+		1208DA8D229EFE7F002635A0 /* HistoryTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1208DA8B229EFE7F002635A0 /* HistoryTblCell.xib */; };
 		B9485F3F048918D95DAA8640 /* Pods_FunFact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7632B43264BEA1CAB9606DBF /* Pods_FunFact.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +40,11 @@
 		1208DA482291602E002635A0 /* UIVIEW+CORNER.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVIEW+CORNER.swift"; sourceTree = "<group>"; };
 		1208DA4B229162E4002635A0 /* FunModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FunModel.swift; sourceTree = "<group>"; };
 		1208DA4D2291C6B2002635A0 /* FactsEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsEngine.swift; sourceTree = "<group>"; };
+		1208DA7A229DAA47002635A0 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		1208DA7C229DAE00002635A0 /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
+		1208DA7E229DAEBD002635A0 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		1208DA8A229EFE7F002635A0 /* HistoryTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTblCell.swift; sourceTree = "<group>"; };
+		1208DA8B229EFE7F002635A0 /* HistoryTblCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTblCell.xib; sourceTree = "<group>"; };
 		2614D527D7E92572D4E3A1D3 /* Pods-FunFact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunFact.debug.xcconfig"; path = "Target Support Files/Pods-FunFact/Pods-FunFact.debug.xcconfig"; sourceTree = "<group>"; };
 		7632B43264BEA1CAB9606DBF /* Pods_FunFact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunFact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FC31FB3C5A35C20E814C3E /* Pods-FunFact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunFact.release.xcconfig"; path = "Target Support Files/Pods-FunFact/Pods-FunFact.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +83,7 @@
 		1208DA2C22915A82002635A0 /* FunFact */ = {
 			isa = PBXGroup;
 			children = (
+				1208DA78229DAA25002635A0 /* CoreData */,
 				1208DA4A229162D2002635A0 /* Model */,
 				1208DA4122915B54002635A0 /* Views */,
 				1208DA4022915B47002635A0 /* Engine */,
@@ -90,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				1208DA2F22915A82002635A0 /* HomePageVC.swift */,
+				1208DA7E229DAEBD002635A0 /* HistoryVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -109,6 +121,8 @@
 			children = (
 				1208DA4222915D13002635A0 /* HomaPageCVC.swift */,
 				1208DA4322915D13002635A0 /* HomaPageCVC.xib */,
+				1208DA8A229EFE7F002635A0 /* HistoryTblCell.swift */,
+				1208DA8B229EFE7F002635A0 /* HistoryTblCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -117,8 +131,17 @@
 			isa = PBXGroup;
 			children = (
 				1208DA4B229162E4002635A0 /* FunModel.swift */,
+				1208DA7C229DAE00002635A0 /* CoreDataController.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		1208DA78229DAA25002635A0 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1208DA79229DAA47002635A0 /* CoreDataModel.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		2D425F406ED515B9B7CE77E8 /* Frameworks */ = {
@@ -201,6 +224,7 @@
 				1208DA3822915A84002635A0 /* LaunchScreen.storyboard in Resources */,
 				1208DA3522915A84002635A0 /* Assets.xcassets in Resources */,
 				1208DA4522915D13002635A0 /* HomaPageCVC.xib in Resources */,
+				1208DA8D229EFE7F002635A0 /* HistoryTblCell.xib in Resources */,
 				1208DA3322915A82002635A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,11 +290,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1208DA4E2291C6B2002635A0 /* FactsEngine.swift in Sources */,
+				1208DA7F229DAEBD002635A0 /* HistoryVC.swift in Sources */,
 				1208DA3022915A82002635A0 /* HomePageVC.swift in Sources */,
 				1208DA4422915D13002635A0 /* HomaPageCVC.swift in Sources */,
+				1208DA7D229DAE00002635A0 /* CoreDataController.swift in Sources */,
 				1208DA2E22915A82002635A0 /* AppDelegate.swift in Sources */,
+				1208DA8C229EFE7F002635A0 /* HistoryTblCell.swift in Sources */,
 				1208DA4722915F92002635A0 /* Constants.swift in Sources */,
 				1208DA492291602E002635A0 /* UIVIEW+CORNER.swift in Sources */,
+				1208DA7B229DAA47002635A0 /* CoreDataModel.xcdatamodeld in Sources */,
 				1208DA4C229162E4002635A0 /* FunModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +501,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1208DA79229DAA47002635A0 /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1208DA7A229DAA47002635A0 /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 1208DA7A229DAA47002635A0 /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1208DA2222915A82002635A0 /* Project object */;
 }

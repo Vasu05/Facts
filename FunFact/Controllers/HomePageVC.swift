@@ -9,13 +9,18 @@
 import UIKit
 import SVProgressHUD
 import PopupDialog
+import CoreData
 
 class HomePageVC: UIViewController {
 
-    @IBOutlet weak var mCollectionView: UICollectionView!    
+    @IBOutlet weak var mCollectionView: UICollectionView!
+    @IBOutlet weak var mHisotryBtn: UIButton!
+    
     var mDataSource = [DataSource]()
     private let cell_identifier = "HomaPageCVC"
     private var msgForDisplay:String?
+    var dataController:CoreDataController!
+    var factsRes: [Facts] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +30,10 @@ class HomePageVC: UIViewController {
         mCollectionView.dataSource = self
         mCollectionView.reloadData()
         // Do any additional setup after loading the view.
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        navigationController?.navigationBar.isHidden = true
     }
     
     private func registerNib(){
@@ -47,6 +56,19 @@ class HomePageVC: UIViewController {
         mDataSource.append(fun)
         mDataSource.append(cat)
         
+    }
+    
+    @IBAction func historyBtnPressed(_ sender: Any) {
+       performSegue(withIdentifier: "HistoryVC", sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HistoryVC" {
+            
+            if let vc = segue.destination as? HistoryVC {
+                
+                vc.dataController = dataController
+            }
+        }
     }
 }
 extension HomePageVC : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
@@ -74,9 +96,7 @@ extension HomePageVC : UICollectionViewDelegate,UICollectionViewDataSource,UICol
         
         let obj = mDataSource[indexPath.row]
         SVProgressHUD.show(withStatus: "Processing...")
-        
-        
-
+    
         switch obj.cellType {
         case .cat:
             FactsEngine.getCatFacts { [weak self](response, error) in
@@ -87,7 +107,7 @@ extension HomePageVC : UICollectionViewDelegate,UICollectionViewDataSource,UICol
                     return
                 }
                 self.msgForDisplay = data.fact
-                self.showPOPUP()
+                self.showPOPUP("Cat")
             }
         case .fun:
             FactsEngine.getRandomJokes { (response, error) in
@@ -97,7 +117,7 @@ extension HomePageVC : UICollectionViewDelegate,UICollectionViewDataSource,UICol
                     return
                 }
                 self.msgForDisplay = data.value?.joke
-                self.showPOPUP()
+                self.showPOPUP("Fun")
             }
         case .number(_):
             FactsEngine.getNumberTrivia { (response, error) in
@@ -107,7 +127,7 @@ extension HomePageVC : UICollectionViewDelegate,UICollectionViewDataSource,UICol
                     return
                 }
                 self.msgForDisplay = data.text
-                self.showPOPUP()
+                self.showPOPUP("Number")
             }
         case .math:
             FactsEngine.getMathRandomFacts { (response, error) in
@@ -117,14 +137,14 @@ extension HomePageVC : UICollectionViewDelegate,UICollectionViewDataSource,UICol
                     return
                 }
                 self.msgForDisplay = data
-                self.showPOPUP()
+                self.showPOPUP("Math")
             }
 
 
         }
         
     }
-    private func showPOPUP(){
+    private func showPOPUP(_ category:String?){
         let popup = PopupDialog(title: nil, message: msgForDisplay, image: nil)
         
         let buttonOne = DefaultButton(title: "OK", dismissOnTap: false) {
@@ -132,6 +152,17 @@ extension HomePageVC : UICollectionViewDelegate,UICollectionViewDataSource,UICol
         }
         popup.addButtons([buttonOne])
         self.present(popup, animated: true, completion: nil)
+        
+        let fact = Facts(context: dataController.viewContext)
+        fact.category = category
+        fact.value = msgForDisplay
+        do{
+            try self.dataController.viewContext.save()
+        }catch{
+            print("Error while saving .....\(error.localizedDescription)  ....")
+        }
     }
+    
+    
 }
 

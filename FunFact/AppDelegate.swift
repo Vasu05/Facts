@@ -13,9 +13,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+      let dataController = CoreDataController(modelName: "CoreDataModel")
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        dataController.load()
+        
+        if let navigation = window?.rootViewController as? UINavigationController{
+            let vc = navigation.topViewController as! HomePageVC
+             vc.dataController = dataController
+        }
         return true
     }
 
