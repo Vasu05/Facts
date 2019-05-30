@@ -10,6 +10,7 @@ import UIKit
 import SVProgressHUD
 import PopupDialog
 import CoreData
+import Toaster
 
 class HomePageVC: UIViewController {
 
@@ -93,6 +94,11 @@ extension HomePageVC : UICollectionViewDelegate,UICollectionViewDataSource,UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        guard Reachability.isConnectedToNetwork() else{
+            Toast(text: "No Internet Connection !!!").show()
+            return
+        }
         
         let obj = mDataSource[indexPath.row]
         SVProgressHUD.show(withStatus: "Processing...")

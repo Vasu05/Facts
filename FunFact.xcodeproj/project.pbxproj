@@ -23,6 +23,7 @@
 		1208DA7F229DAEBD002635A0 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208DA7E229DAEBD002635A0 /* HistoryVC.swift */; };
 		1208DA8C229EFE7F002635A0 /* HistoryTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208DA8A229EFE7F002635A0 /* HistoryTblCell.swift */; };
 		1208DA8D229EFE7F002635A0 /* HistoryTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1208DA8B229EFE7F002635A0 /* HistoryTblCell.xib */; };
+		1208DA90229FAA76002635A0 /* InternetConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1208DA8F229FAA76002635A0 /* InternetConnection.swift */; };
 		B9485F3F048918D95DAA8640 /* Pods_FunFact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7632B43264BEA1CAB9606DBF /* Pods_FunFact.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		1208DA7E229DAEBD002635A0 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		1208DA8A229EFE7F002635A0 /* HistoryTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTblCell.swift; sourceTree = "<group>"; };
 		1208DA8B229EFE7F002635A0 /* HistoryTblCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTblCell.xib; sourceTree = "<group>"; };
+		1208DA8F229FAA76002635A0 /* InternetConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnection.swift; sourceTree = "<group>"; };
 		2614D527D7E92572D4E3A1D3 /* Pods-FunFact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunFact.debug.xcconfig"; path = "Target Support Files/Pods-FunFact/Pods-FunFact.debug.xcconfig"; sourceTree = "<group>"; };
 		7632B43264BEA1CAB9606DBF /* Pods_FunFact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunFact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7FC31FB3C5A35C20E814C3E /* Pods-FunFact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunFact.release.xcconfig"; path = "Target Support Files/Pods-FunFact/Pods-FunFact.release.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				1208DA482291602E002635A0 /* UIVIEW+CORNER.swift */,
 				1208DA4622915F92002635A0 /* Constants.swift */,
 				1208DA4D2291C6B2002635A0 /* FactsEngine.swift */,
+				1208DA8F229FAA76002635A0 /* InternetConnection.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1208DA90229FAA76002635A0 /* InternetConnection.swift in Sources */,
 				1208DA4E2291C6B2002635A0 /* FactsEngine.swift in Sources */,
 				1208DA7F229DAEBD002635A0 /* HistoryVC.swift in Sources */,
 				1208DA3022915A82002635A0 /* HomePageVC.swift in Sources */,

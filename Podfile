@@ -9,5 +9,6 @@ target 'FunFact' do
   pod 'SVProgressHUD'
   pod 'Toaster'
   pod 'PopupDialog'
+  pod 'Toaster'
 
 end
