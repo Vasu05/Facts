@@ -33,5 +33,5 @@ fact.
 
 ## How to use
 - Create New folder on desktop use "git clone https://github.com/Vasu05/Facts.git" in terminal.
-- open FunFact.xcworkspace using XCode 10.1
+- open FunFact.xcworkspace using XCode 9.2 
 
